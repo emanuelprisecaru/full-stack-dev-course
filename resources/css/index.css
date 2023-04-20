@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("../fonts/SpaceMono/space-mono-v12-latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/SpaceMono/space-mono-v12-latin-regular.woff") format("woff"),
+    url("../fonts/SpaceMono/space-mono-v12-latin-regular.ttf")
+      format("truetype");
+}
 h1,
 h2,
 h3,

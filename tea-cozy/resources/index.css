@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("../../resources/fonts/SpaceMono/space-mono-v12-latin-regular.woff2")
+      format("woff2"),
+    url("../../resources/fonts/SpaceMono/space-mono-v12-latin-regular.woff2")
+      format("woff"),
+    url("../../resources/fonts/SpaceMono/space-mono-v12-latin-regular.woff2")
+      format("truetype");
+}
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  display: block;
+  margin: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0 0 0;
+  z-index: 100;
+  background-color: black;
+  /* margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px; */
+}
+#nav {
+  border-bottom: 1px solid seashell;
+}
+.container {
+  height: 69px;
+  width: 100%;
+  margin: 0 auto 0 auto;
+}
+#logo img {
+  height: 50px;
+}
+#logo {
+  float: left;
+  margin-left: 10px;
+}
+.item {
+  width: 300px;
+  margin: 10px 0;
+}
+.item img {
+  width: 100%;
+}
+
+#menu {
+  float: right;
+  min-height: 1px;
+  list-style-type: none;
+  display: inline-flex;
+  margin-right: 10px;
+}
+#menu li + li,
+.products-list div + div {
+  margin-left: 20px;
+}
+#menu a {
+  text-decoration: underline;
+  vertical-align: middle;
+}
+#mission {
+  max-width: 1200px;
+  height: 700px;
+  background-image: url("./images/img-mission-background.jpeg");
+  margin: 0 auto 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+.hero-banner {
+  width: 100%;
+  background-color: black;
+}
+.flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-center-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#mission h2,
+#mission h4,
+#products-container h2,
+#products-container p {
+  width: 100%;
+  background-color: black;
+  margin: 10px 0px 10px 0px;
+  text-align: center;
+}
+#locations {
+  background-image: url("./images/img-locations-background.jpeg");
+  background-repeat: no-repeat;
+  width: 1200px;
+  height: 500px;
+  margin: 2em auto 0 auto;
+}
+#locations h2 {
+  margin-bottom: 15px;
+}
+#locations .item {
+  background-color: black;
+}
+.item a {
+  color: seashell;
+  text-decoration: none;
+}
+#locations div.item + div.item {
+  margin-left: 40px;
+}
+main {
+  margin-top: 80px;
+  position: relative;
+}
+#products-container {
+  width: 1000px;
+  margin: 2em auto 1em auto;
+}
+.products-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+footer {
+  margin: 0 auto 0 auto;
+}
+#contact {
+  height: 200px;
+}
+#copyright {
+  margin-left: 20px;
+}
+/* @media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+} */
