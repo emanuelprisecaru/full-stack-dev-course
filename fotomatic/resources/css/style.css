@@ -66,7 +66,7 @@ html {
   width: 100%;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
   .main-content {
     top: 2.5625rem;
   }
@@ -76,10 +76,10 @@ html {
 
 header {
   position: fixed;
+  z-index: 100;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
-  height: 85px;
 }
 
 header .content {
@@ -102,7 +102,6 @@ header nav ul {
 nav li {
   padding-left: 3.5rem;
 }
-
 nav a {
   vertical-align: bottom;
   line-height: 1.6;
@@ -110,7 +109,15 @@ nav a {
   font-family: "Roboto-Regular";
   color: #4a4a4a;
 }
-
+nav .button {
+  padding: 0.1875rem 0.5rem;
+  background-color: #9dc20b;
+  line-height: 1.6;
+  color: white;
+}
+nav li:last-child {
+  display: none;
+}
 header .icon {
   width: 1rem;
   padding-left: 0.75rem;
@@ -119,8 +126,15 @@ header .icon {
 header .mobile {
   display: none;
 }
-
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
+  nav li:last-child {
+    display: block;
+  }
+  header .content {
+    padding: 1rem 1rem;
+  }
+}
+@media only screen and (max-width: 600px) {
   header .desktop {
     display: none;
   }
@@ -222,7 +236,7 @@ header .mobile {
 #sign-up-cta .email .button {
   font-family: "Roboto-Medium", sans-serif;
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -254,7 +268,7 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
   #sign-up-section {
     height: 20rem;
   }
@@ -274,7 +288,7 @@ header .mobile {
   display: flex;
   justify-content: space-between;
   padding: 4rem 5%;
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 .feature {
@@ -282,6 +296,9 @@ header .mobile {
   padding: 2rem;
   margin: 0px 1.25rem;
   background-color: white;
+}
+.feature .content {
+  padding-top: 2.5rem;
 }
 
 .feature .image-container {
@@ -292,7 +309,7 @@ header .mobile {
 
 .feature h2 {
   padding-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
   font-family: "Roboto-Bold";
@@ -305,9 +322,19 @@ header .mobile {
   color: #4a4a4a;
 }
 
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 895px) {
+  #features-section {
+    padding: 1rem;
+  }
+  .feature {
+    padding: 1rem;
+    margin: 0px 0.5rem;
+  }
+  .feature .content {
+    padding-top: 2.5rem;
+  }
   .feature h2 {
-    font-size: 1.125rem;
+    font-size: 2rem;
     line-height: 1.3;
     font-weight: normal;
   }
@@ -318,15 +345,22 @@ header .mobile {
   }
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 600px) {
   #features-section {
     flex-flow: column;
     padding: 0;
   }
-
   .feature {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
+  }
+  .feature h2 {
+    font-size: 1.125rem;
+    font-family: "Roboto-Regular";
+    line-height: 1.3;
+  }
+  .feature .content {
+    padding: 1.25rem 0 1.875rem 0;
   }
 }
 
@@ -343,7 +377,7 @@ header .mobile {
 }
 
 #filters-section .content h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: white;
   font-family: "Roboto-Bold";
   opacity: 100%;
@@ -362,7 +396,7 @@ header .mobile {
   display: flex;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
   #filters-section {
     padding: 1.5rem 0 0 0;
   }
@@ -386,6 +420,24 @@ header .mobile {
   #filters-section .images-container {
     padding: 0;
   }
+}
+@media only screen and (max-width: 600px) {
+  #filters-section {
+    padding: 1.5rem 0 0 0;
+  }
+  #filters-section .content {
+    margin-bottom: 1rem;
+  }
+  #filters-section .content h2 {
+    padding-bottom: 0.625rem;
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+  #filters-section .content h3 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
 
   #filters-section .extra {
     display: none;
@@ -398,34 +450,42 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
-  padding: 5rem 0;
+#quotes-section .content {
+  padding: 5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: "Palatino-Italic", serif;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 895px) {
   #quotes-section content {
     padding: 1.875rem 0.625rem;
   }
-
-  #quotes-section quote {
+}
+@media only screen and (max-width: 600px) {
+  #quotes-section .content {
+    flex-flow: column;
+    padding: 1.875rem 0.625rem;
+  }
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
@@ -443,13 +503,17 @@ footer .content {
   color: white;
   display: flex;
   font-size: 0.75rem;
+  font-family: "Robot-Regular";
 }
 
 footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (min-width: 760px) {
+@media only screen and (max-width: 895px) {
+}
+
+@media only screen and (max-width: 600px) {
   footer .content {
     font-size: 0.625rem;
   }
